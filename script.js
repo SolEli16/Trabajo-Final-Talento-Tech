@@ -1,50 +1,23 @@
 // 🛍️ Productos simulados
-const productos = [
-  { id: 1, nombre: "Sticker Capibara", precio: 1200, imagen: "stickers.jpg" },
-  { id: 2, nombre: "Lapicera Azul", precio: 1500, imagen: "lapicera.jpg" },
-  { id: 3, nombre: "Lapicera de 4 Colores", precio: 2100, imagen: "mapedcolores.jpg" },
-  { id: 4, nombre: "Resaltadores con perfume", precio: 4500, imagen: "resaltadores1.jpg" },
-  
-  // 🎉 Nuevos productos (comienzan en id: 5)
-  { id: 5, nombre: "Anotador cartera", precio: 3500, imagen: "anotadorcartera.jpg" },
-  { id: 6, nombre: "Anotador París", precio: 3600, imagen: "anotadorparis.jpg" },
-  { id: 7, nombre: "Cartuchos fibrones", precio: 2900, imagen: "cartuchosfibron.jpg" },
-  { id: 8, nombre: "Clips kawaii", precio: 1800, imagen: "clipskawaii.jpg" },
-  { id: 9, nombre: "Cuaderno A5", precio: 4900, imagen: "cuadernoa5.jpg" },
-  { id:10, nombre: "Cuaderno pastel", precio: 5200, imagen: "cuadernospastel.jpg" },
-  { id:11, nombre: "Espejito flor", precio: 2500, imagen: "espejito1.jpg" },
-  { id:12, nombre: "Fibrones para pizarra", precio: 3100, imagen: "fibronpizarra.jpg" },
-  { id:13, nombre: "Lapicera gel", precio: 1900, imagen: "lapiceragel.jpg" },
-  { id:14, nombre: "Lapicera mini conejo", precio: 2100, imagen: "lapiceraminiconejo.jpg" },
-  { id:15, nombre: "Lapicera negra", precio: 1700, imagen: "lapiceranegra.jpg" },
-  { id:16, nombre: "Lapicera panda", precio: 2300, imagen: "lapicerapanda.jpg" },
-  { id:17, nombre: "Lapicera Pikachu", precio: 2400, imagen: "lapicerapikachu.jpg" },
-  { id:18, nombre: "Libreta Dino", precio: 3300, imagen: "libretadino.jpg" },
-  { id:19, nombre: "Libreta Juegos", precio: 3200, imagen: "libretajuegos.jpg" },
-  { id:20, nombre: "Microfibra motivos", precio: 2800, imagen: "microfibrasmotivos.jpg" },
-  { id:21, nombre: "Notas transparentes", precio: 1600, imagen: "notastransparentes.jpg" },
-  { id:22, nombre: "Resaltador pastel", precio: 3000, imagen: "resaltadores1.jpg" },
-  { id:23, nombre: "Sellitos divertidos", precio: 2200, imagen: "sellitos.jpg" },
-  { id:24, nombre: "Set de sellos", precio: 3400, imagen: "setsello.jpg" },
-  { id:25, nombre: "Espejito corazón", precio: 2500, imagen: "spejito2.jpg" },
-  { id:26, nombre: "Stickers corazones", precio: 1300, imagen: "stickers2.jpg" },
-  { id:27, nombre: "Stickers animales", precio: 1300, imagen: "stickers3.jpg" },
-  { id:28, nombre: "Stickers kawaii", precio: 1300, imagen: "stickers4.jpg" },
-  { id:29, nombre: "Goma Pikachu", precio: 1400, imagen: "gomapikachu.jpg" },
-  { id:30, nombre: "Gomas dinosaurios", precio: 1500, imagen: "gomasdinos.jpg" },
-  { id:31, nombre: "Gomas pastitas", precio: 1500, imagen: "gomaspatitas.jpg" },
-  { id:32, nombre: "Lapicera flexible", precio: 1800, imagen: "flexibles.jpg" },
-  { id:33, nombre: "Libreta estilo 1", precio: 3100, imagen: "libretita1.jpg" },
-  { id:34, nombre: "Cuaderno A5 color 1", precio: 5100, imagen: "cuadernoa5-1.jpg" },
-  { id:35, nombre: "Cuaderno A5 color 2", precio: 5100, imagen: "cuadernoa5-2.jpg" },
-  { id:36, nombre: "Lapicera 1", precio: 1500, imagen: "lapicera1.jpg" },
-  { id:37, nombre: "Lapicera 2", precio: 1500, imagen: "lapicera2.jpg" },
-  { id:38, nombre: "Lapicera 3", precio: 1500, imagen: "lapicera3.jpg" },
-  { id:39, nombre: "Lapicera 4", precio: 1500, imagen: "lapicera4.jpg" },
-  { id:40, nombre: "Lapicera 5", precio: 1500, imagen: "lapicera5.jpg" },
-  { id:41, nombre: "Lapicera 6", precio: 1500, imagen: "lapicera6.jpg" },
-  { id:42, nombre: "Lapicera básica", precio: 1500, imagen: "lapicera.jpg" }
-];
+let productos = [];
+
+document.addEventListener("DOMContentLoaded", () => {
+  const contenedor = document.querySelector(".productos-container");
+
+  // 🛍️ Cargar productos desde productos.json
+  fetch("productos.json")
+    .then(response => {
+      if (!response.ok) throw new Error("Error al cargar productos");
+      return response.json();
+    })
+    .then(data => {
+      productos = data;
+      mostrarProductos();
+    })
+    .catch(error => {
+      console.error("Hubo un problema con la carga:", error);
+      contenedor.innerHTML = "<p>No se pudieron cargar los productos 🛠️</p>";
+    });
 
 // 🛒 Carrito de compras
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
