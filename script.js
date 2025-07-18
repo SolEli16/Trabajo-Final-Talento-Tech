@@ -7,7 +7,6 @@ const $ = selector => document.querySelector(selector);
 
 // 📦 Inicializar aplicación
 document.addEventListener("DOMContentLoaded", () => {
-  cargarProductos();
   actualizarContador();
   mostrarCarrito();
   configurarEventos();
