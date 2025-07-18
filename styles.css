@@ -1,0 +1,377 @@
+/* 🎀 Encabezado */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #f9e4ff;
+  font-family: 'Dancing Script', cursive;
+}
+
+header h1 {
+    font-family: 'Dancing Script', cursive;
+  font-size: 56px;
+  font-weight: 700;
+
+  font-size: 48px;
+  color: #4a006b;
+  margin: 0;
+}
+
+.logo {
+  width: 120px;
+  border-radius: 60px;
+}
+
+.logo {
+  width: 120px;
+  border-radius: 60px;
+  margin-top: 10px;
+}
+
+/* 🔗 Navegación elegante */
+.barra-navegacion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 40px;
+  background-color: #fff0ff;
+}
+
+.nav-izquierda {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-izquierda li a {
+  font-family: 'Dancing Script', cursive;
+  font-size: 28px;
+  font-weight: bold;
+  color: #4a006b;
+  text-decoration: none;
+}
+
+.nav-izquierda li a:hover {
+  color: #cd20f8;
+}
+
+/* 🛒 Indicador y panel */
+.carrito-wrapper {
+  position: relative;
+}
+
+.carrito-indicador {
+  background-color: #cd20f8;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 18px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease;
+}
+
+.carrito-indicador:hover {
+  background-color: #a500a5;
+}
+
+.carrito-popup {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  width: 320px;
+  max-height: 400px;
+  overflow-y: auto;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  display: none;
+  z-index: 100;
+  transition: all 0.3s ease;
+}
+
+.carrito-popup.visible {
+  display: block;
+}
+
+.carrito-acciones {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+.carrito-acciones button {
+  flex: 1;
+  background: linear-gradient(145deg, #e64afc, #c42bc3);
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  font-size: 17px;
+  font-family: 'Dancing Script', cursive;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+.carrito-acciones button:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(145deg, #c42bc3, #e64afc);
+}
+
+/* 🧃 Sección de productos */
+.productos-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin: 40px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+}
+
+.card img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 0 auto;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.card button {
+  background-color: #cd20f8;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background-color: #a500a5;
+}
+
+/* 🛍️ Carrito desplegable */
+.carrito-popup {
+  position: absolute;
+  top: 50px; /* según la altura del nav */
+  right: 0;  /* alineado al borde derecho del .carrito-wrapper */
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  width: 320px;
+  max-height: 400px;
+  overflow-y: auto;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  display: none;
+  z-index: 100;
+  transition: all 0.3s ease;
+}
+
+.carrito-popup.visible {
+  display: block;
+}
+
+.carrito-item {
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+.carrito-item h4 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.carrito-item p {
+  margin: 4px 0;
+}
+
+.carrito-item button {
+  background-color: #cd20f8;
+  color: white;
+  border: none;
+  padding: 5px 8px;
+  margin: 0 2px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.carrito-item button:hover {
+  background-color: #a500a5;
+}
+
+/* 💰 Total */
+#total {
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 18px;
+  color: #4a006b;
+}
+
+/* 📝 Reseñas */
+.reseñas-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin: 30px;
+}
+
+.reseña {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.reseña img {
+  width: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+/* 📧 Formulario */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 30px auto;
+  max-width: 600px;
+}
+
+input, textarea {
+  padding: 10px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button[type="submit"] {
+  background-color: #cd20f8;
+  color: white;
+  padding: 10px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #a500a5;
+}
+
+/* 📱 Responsive */
+@media (max-width: 600px) {
+  .nav-izquierda li a,
+  .nav-derecha li {
+    font-size: 18px;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .carrito-popup {
+    right: auto;
+    left: 0;
+  }
+}
+
+/* 🌈 Fondo general */
+body {
+  background-image: url("img/fondo.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* 🖼️ Ajuste extra del logo si necesitas centrarlo */
+.logo {
+  display: block;
+  margin: 10px auto;
+}
+
+/* 🧊 Modal de compra */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 200;
+}
+
+.modal-contenido {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  position: relative;
+}
+
+.modal-contenido h2 {
+  margin-bottom: 20px;
+  font-family: 'Dancing Script', cursive;
+  font-size: 30px;
+  color: #4a006b;
+}
+
+.modal-contenido input,
+.modal-contenido select {
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.modal-contenido button {
+  background-color: #cd20f8;
+  color: white;
+  font-size: 16px;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.modal-contenido button:hover {
+  background-color: #a500a5;
+}
+
+.cerrar {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  font-size: 28px;
+  cursor: pointer;
+  color: #666;
+}
