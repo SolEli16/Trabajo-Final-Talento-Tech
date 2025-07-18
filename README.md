@@ -28,7 +28,7 @@ Crear un sitio web de e-commerce completo que permita:
 ---
 
 ## 📦 Estructura del proyecto
-📂 ecommerce/ ├── index.html           // Página principal con productos, reseñas y contacto ├── carrito.html         // Carrito de compras dinámico ├── styles.css           // Estilos visuales y responsividad ├── script.js            // Lógica con JavaScript ├── assets/              // Imágenes, fondo, logo ├── README.md            // Este archivo ✨
+📂 ecommerce/ ├── index.html           // Página principal con productos, reseñas y contacto ├── Carrito de compras dinámico ├── styles.css           // Estilos visuales y responsividad ├── script.js            // Lógica con JavaScript ├──  Imágenes, fondo, logo ├── README.md            // Este archivo ✨
 
 
 ---
@@ -47,8 +47,17 @@ Crear un sitio web de e-commerce completo que permita:
 
 ## 🔗 Link al sitio publicado
 
+https://soleli16.github.io/Trabajo-Final-Talento-Tech/
 
+🧭 Cómo usar la página desde una computadora
+- Abrí el navegador (Google Chrome, Mozilla Firefox, Edge, etc.).
+- Ingresá el enlace web de la tienda, por ejemplo:
+👉 https://solprograma.github.io/chucherias-de-ensueño/
+- Una vez cargado el sitio podés:
+- Navegar por las secciones “Inicio”, “Productos” y “Contacto”
+- Explorar los productos en forma de tarjetas
+- Agregar artículos al carrito 🛒
+- Completar la simulación de compra desde el modal
+- Enviar mensajes desde el formulario de contacto
+⚠️ No es necesario instalar nada. Solo se requiere conexión a internet y un navegador actualizado.
 
-## 💻 Instalación local
-
-Si querés probarlo en tu computadora:
